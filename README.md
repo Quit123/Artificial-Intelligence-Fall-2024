@@ -49,29 +49,11 @@ The following will use heuristic algorithms and evolutionary algorithms to analy
 **1.Monte Carlo simulation**
 
 A computational algorithm that uses repeated random sampling to obtain the likelihood of a range of results of occurring
-$$
-max\Phi(S_1,S_2) = max\Epsilon[|V\backslash(r_1(I_1 \cup S_1)\Delta r_2(I_2 \cup S_2))|]
-\\ 
-\Downarrow
-\\
-\hat{\Phi}(S_1, S_2) = {\sum_{i=0}^{N} \Phi_{g_i}(S_1,S_2) \over N}
-$$
+<img width="623" alt="image" src="https://github.com/user-attachments/assets/13c74efb-1b1f-402b-b892-56d1ef60ca79">
+
 Relevant terms and symbols are explained as follows:
+<img width="578" alt="image" src="https://github.com/user-attachments/assets/5ca65b54-8d86-4438-bbba-5d3408f3ae84">
 
-
-$$
-\hspace{2cm}S_i\hspace{5.15cm}Balanced\;seed\;seti\hspace{0.19cm}
-\\
-\hspace{1.15cm}I_i\hspace{5.25cm}Initial\;seed\;set
-\\
-\hspace{1.7cm}V\hspace{5.22cm}Complete\;seed\;set
-\\
-\hspace{1.9cm}N\hspace{5.25cm}Total\;seed\;quantity
-\\
-\hspace{1.69cm}r_i\hspace{5.2cm}Random\;variables
-\\
-\hspace{1.5cm}\Phi(S_x,S_y)\hspace{4cm}Estimation\;function
-$$
 **2.Heuristic algorithm for IEM**
 
 Main idea: expand the node with the largest ℎ(𝑣) value
@@ -110,25 +92,16 @@ add the better option between <𝑣1∗, ∅> and <∅, 𝑣2∗> to <𝑆1, �
 **1.genetic makeup**
 
 Binary representation:
-$$
-x = \{x_1,x_2,...x_{|V|},x_{|V|+1},x_{|V|+2},...,x_{|V|+|V|} \}
-\\
-x_i\in\{False,True \}
-\\\hspace{2.5cm}\downarrow
-\\
-𝑖th\;node\;is\;added\;into\;𝑆1, 𝑖 ∈ [1, |𝑉|]
-\\
-𝑖th\;node\;is\;added\;into\;𝑆2, 𝑖 ∈ [ 𝑉 + 1 , 𝑉 + |𝑉|]
-$$
+<img width="596" alt="image" src="https://github.com/user-attachments/assets/04e8e1fa-e04e-4540-aa59-6d929274f63b">
+
 **2.Fitness Function**
 
 Distinguish between feasible and infeasible solutions:
-$$
-fitness(S_1,S_2)= \begin{cases} \hat{\Phi}(S_1,S_2),& \text if\;|S_1|+|S_2|\leq k, \\ -(|S_1|+|S_2|), & \text{otherwise} \end{cases}
-$$
+<img width="558" alt="image" src="https://github.com/user-attachments/assets/bb7a3336-3d69-44ae-a770-7ff5bd90013b">
+
 **3.flow charts**
 
-<img src="D:\学习\report\evo.png" alt="evo" style="zoom:33%;" />
+<img width="571" alt="image" src="https://github.com/user-attachments/assets/029cc6e0-ff56-4b39-8dc9-226b9fca0af9">
 
 
 
@@ -190,9 +163,11 @@ All data provided from the Department of Computer Science and Technology at SUST
 
 **Good Result:**
 
-<img src="D:\学习\report\result2.png" style="zoom:50%;" />
+<img width="604" alt="image" src="https://github.com/user-attachments/assets/ec39d4a5-d027-46b2-837f-daf9ed9b6006">
 
-<img src="D:\学习\report\evo_result.png" style="zoom:50%;" />
+
+<img width="603" alt="image" src="https://github.com/user-attachments/assets/803304dc-c3c3-4b21-9377-6244a57eeab1">
+
 
 This chart records the best fitness of each generation, and there is still significant room for improvement in the end. It can improve algebra and further enhance fitness.
 
@@ -202,11 +177,13 @@ Regarding the setting of genetic algorithm control parameters. The current setti
 
 **Bad return:**
 
-![](D:\学习\report\2_bad.png)
+<img width="598" alt="image" src="https://github.com/user-attachments/assets/342df7a3-685c-41c3-89c5-085877db7de2">
+
 
 In the use of evolutionary algorithms, due to excessively high algebraic settings and high memory usage, the link memory cannot be fully utilized, resulting in low performance.
 
-![](D:\学习\report\1_bad.png)
+<img width="598" alt="image" src="https://github.com/user-attachments/assets/f16384ec-cfb2-434e-a081-c9c28810a064">
+
 
 Due to low Monte Carlo parameter settings. However, being too high can lead to timeouts, and we are seeking a balance between the two.
 
