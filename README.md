@@ -1,4 +1,4 @@
-# CS303 Project1 Report
+# 📺CS303 Project1 Report
 
 ## Introduction
 
